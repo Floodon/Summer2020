@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Profil Artistes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom de scene</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Description</th>
+      <th>Artiste</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profil_artistes.each do |profil_artiste| %>
+      <tr>
+        <td><%= profil_artiste.nom_de_scene %></td>
+        <td><%= profil_artiste.nom %></td>
+        <td><%= profil_artiste.prenom %></td>
+        <td><%= profil_artiste.description %></td>
+        <td><%= profil_artiste.artiste_id %></td>
+        <td><%= link_to 'Show', profil_artiste %></td>
+        <td><%= link_to 'Edit', edit_profil_artiste_path(profil_artiste) %></td>
+        <td><%= link_to 'Destroy', profil_artiste, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profil Artiste', new_profil_artiste_path %>

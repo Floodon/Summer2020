@@ -1,0 +1,18 @@
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li><%= link_to 'Home', root_path%></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <% if artiste_signed_in? %>
+            <% if current_artiste.profil_artiste == nil %>
+                <li><%= link_to 'Create Profil', new_profil_artiste_path %></li>
+            <% else %>
+                <li><%= link_to 'View Profil', current_artiste.profil_artiste %></li>
+                <li><%= link_to 'Edit Profil', edit_profil_artiste_path(current_artiste.profil_artiste) %></li>
+            <% end %>
+            <li><%= link_to 'Sign out', destroy_artiste_session_path, :method => :delete %>
+        <% else %>
+             <%= link_to 'Register', new_artiste_registration_path %> or <%= link_to 'Sign in', new_artiste_session_path %>
+        <% end %>
+    </ul>
+</nav>

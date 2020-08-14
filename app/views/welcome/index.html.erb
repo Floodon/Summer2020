@@ -1,0 +1,8 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+<div id="user_nav">
+    <% if artiste_signed_in? %>
+        Signed in as <%= current_artiste.email %>.
+    <% end %>
+</div>

@@ -1,0 +1,22 @@
+<p id="notice"><%=notice%></p>
+
+<h1>Liste des artistes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom de scène</th>
+            <th>Description</th>
+            <th colspan="1"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <%@artistes.each do |artiste| %>
+            <tr>
+                <td><%= artiste.profil_artiste.nom_de_scene %></td>
+                <td><%= artiste.profil_artiste.description %></td>
+                <td><%= link_to 'Show', artiste.profil_artiste %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

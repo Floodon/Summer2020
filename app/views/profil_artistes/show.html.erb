@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom de scene:</strong>
+  <%= @profil_artiste.nom_de_scene %>
+</p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @profil_artiste.nom %>
+</p>
+
+<p>
+  <strong>Prenom:</strong>
+  <%= @profil_artiste.prenom %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @profil_artiste.description %>
+</p>
+
+<p>
+  <strong>Artiste:</strong>
+  <%= @profil_artiste.artiste_id %>
+</p>
+
+<%= link_to 'Edit', edit_profil_artiste_path(@profil_artiste) %> |
+<%= link_to 'Back', profil_artistes_path %>
